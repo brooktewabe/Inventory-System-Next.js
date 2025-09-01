@@ -4,8 +4,7 @@ import { clearAuthData } from './auth'
 
 // Create axios instance
 const api = axios.create({
-  // baseURL: 'http://localhost:5000',
-  baseURL: 'https://api.cnhtc4.com',
+  baseURL: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:5000',
   timeout: 10000,
 })
 

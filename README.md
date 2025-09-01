@@ -1,7 +1,11 @@
 # Inventory Management System - Next.js 15
-
 A comprehensive inventory management system built with Next.js 15, TanStack Query, and TypeScript. This application provides a complete solution for managing inventory, sales, and customer data with role-based access control.
 
+![Demo](public/Screenshot(38).png)
+![Demo](public/Screenshot(39).png)
+![Demo](public/Screenshot(36).png)
+
+Backend url: https://github.com/brooktewabe/Inventory-API-Nest.js-v2
 ## 🚀 Features
 
 ### Core Functionality
@@ -111,87 +115,6 @@ The system implements a comprehensive permission system:
 - **Admin**: Full system access with user management
 - **Manager**: Limited administrative access without user management
 - **Data Clerk**: Basic operational access for daily tasks
-
-## 🎯 Key Improvements Over Previous Version
-
-### 1. **Sidebar State Management** ✅ FIXED
-- **Problem**: Sidebar showing after logout or not showing after login
-- **Solution**: Proper state management with `useSidebar` hook and localStorage persistence
-- **Benefits**: 
-  - Consistent sidebar behavior across navigation
-  - No white space when sidebar is hidden
-  - Responsive behavior on mobile devices
-  - Automatic state restoration
-
-### 2. **Authentication Flow** ✅ FIXED
-- **Problem**: Manual page refreshes needed for auth state updates
-- **Solution**: Proper auth context with `useAuth` hook and Next.js middleware
-- **Benefits**: 
-  - Seamless authentication without page refreshes
-  - Automatic token validation and cleanup
-  - Secure route protection at multiple levels
-
-### 3. **Batch Sale Persistence** ✅ ENHANCED
-- **Problem**: Loss of batch sale data on navigation
-- **Solution**: Custom `useBatchSale` hook with localStorage persistence
-- **Benefits**: 
-  - Users can safely navigate away and return
-  - Automatic data restoration on page load
-  - Better error handling and validation
-
-### 4. **Data Fetching & Caching** ✅ IMPROVED
-- **Problem**: Manual API calls and state management
-- **Solution**: TanStack Query for caching, background updates, and optimistic updates
-- **Benefits**: 
-  - Automatic caching and background refetching
-  - Optimistic updates for better UX
-  - Reduced API calls with intelligent caching
-
-### 5. **Type Safety** ✅ ENHANCED
-- **Problem**: Runtime errors from type mismatches
-- **Solution**: TypeScript for critical components and data structures
-- **Benefits**: 
-  - Better developer experience
-  - Fewer runtime errors
-  - Improved code maintainability
-
-### 6. **Route Protection** ✅ SECURED
-- **Problem**: Client-side only route protection
-- **Solution**: Next.js middleware + component-level protection
-- **Benefits**: 
-  - Server-side route protection
-  - Permission-based access control
-  - Better security posture
-
-### 7. **Performance Optimizations** ✅ OPTIMIZED
-- **Problem**: Unnecessary re-renders and API calls
-- **Solution**: React Query caching, debounced search, and optimized components
-- **Benefits**: 
-  - Faster load times
-  - Reduced server load
-  - Better user experience
-
-## 🔄 Migration Benefits
-
-### Before (Previous Implementation)
-- ❌ Manual state management
-- ❌ Sidebar state issues after auth changes
-- ❌ Manual API call management
-- ❌ Client-side only route protection
-- ❌ Manual cache invalidation
-- ❌ Loss of batch sale data on navigation
-- ❌ Authentication refresh problems
-- ❌ White space when sidebar hidden
-
-### After (Next.js 15 + TanStack)
-- ✅ Declarative state management with hooks
-- ✅ Persistent sidebar state with proper cleanup
-- ✅ Automatic caching and background updates
-- ✅ Server-side + client-side protection
-- ✅ Automatic cache invalidation
-- ✅ Persistent batch sale data with localStorage
-- ✅ Seamless authentication flow
-- ✅ Dynamic layout without white space
 
 ## 🚀 Performance Features
 
